@@ -23,3 +23,14 @@ File or Folder | Purpose
 ## Learn More
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
+
+### Note
+Initial attemps to deploy to render failed multiple times. The error was related to xssec.
+This was solved by adding mock authorization in package.json
+  "cds": {
+    "requires": {
+      "auth": {
+        "kind": "mocked"
+      }
+    }
+  }
