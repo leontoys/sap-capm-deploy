@@ -1,6 +1,6 @@
 namespace com.sap.learning;
 
-entity Books @cds.persistence: { table: 'com.sap.learning-Books.csv' } {
+entity Books {
     key ID          : UUID;
         title       : String(255);
         genre       : Genre;
@@ -23,7 +23,7 @@ type Price {
 }
 
 
-entity Authors @cds.persistence: { table: 'com.sap.learning-Authors.csv' }  {
+entity Authors {
     key ID          : UUID;
         name        : String(100);
         dateOfBirth : Date;
